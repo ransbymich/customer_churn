@@ -1,0 +1,57 @@
+Topic: Use supervised learning to implement a model that detects fake news articles.
+ 
+Introduction/Background
+	Since the introduction of the 24-hour news cycle, news has spread aggressively to media platforms beyond traditional news outlets.
+  To supply the demand for news, many platforms have resorted to pumping out stories with little fact checking and oftentimes misleading titles and topics to gain more traffic.
+  It can be difficult to discern fact from fiction with what we now know as the “fake news” era.
+  We hope to use supervised learning to evaluate news documents to predict their accuracy.
+ 
+Problem definition
+	Social media has become one of the biggest sources for global awareness and status updates on the world.
+  In other words, social media has become the main source for news, which is not factual 100% of the time.
+  Fake news and social media have been the root to trauma as dramatic as ruining people’s lives with harsh untrue allegations.
+  Some victims, even after proven innocent, are still known as the untrue accusation.
+  False news articles can be difficult to spot by any human reader.
+  Other than fact-checking, monitoring word use and frequency along with other linguistic analysis can help identify patterns in real and fake news.
+  How can we use machine learning to develop a reasonably precise agent that uses these patterns to determine if news documents are real or fake.
+ 
+Methods
+	Documents with a pre-verified real/fake designation will be used to train the agent.
+  Term Frequency assigns a value for each unique word found in a document.
+  Inverse Document Frequency uses the term frequency values from a large sample of documents to dismiss values of words that are common across most documents.
+  TF-IDF values are then vectorized which become the features in the data set matrix.
+ 
+Potential results
+	A proper classifier will use the features described in the method to learn patterns in real and fake news sources.
+  One potential result is that TF-IDF is a reliable way to identify false documents, and after learning the agent will be able to guess correctly about other documents’ truth.
+  Correctness could range greatly however.
+  Some methods of approaching this problem have shown success rates of near 70% while others are up to the low-mid 90s.
+  
+  	It is possible that features made from TF-IDF Vectorization alone are not enough to create an accurate agent.
+  This would be cause to research further methods. Although it has been shown that with proper learning methods these features are enough.
+ 
+Discussion
+	With the help of linguistic factors, like ngrams, punctuation, readability and syntax, we will be able to mimic patterns of real news articles and use this to detect when an input is fake.
+  According to Veronica Perez-Rosa in her paper Automatic Detection of Fake News, they were able to develop a model that was close to 80% in accuracy.
+  If we can mimic the model while using titles we could be able to create a detection for a fake news article by the title.
+  This can help us achieve the ability to detect a fake news article without even clicking on it to read more.
+
+
+
+References
+
+J. C. S. Reis, A. Correia, F. Murai, A. Veloso and F. Benevenuto, "Supervised Learning for Fake News Detection," in IEEE Intelligent Systems, vol. 34, no. 2, pp. 76-81, March-April 2019, doi: 10.1109/MIS.2019.2899143.
+https://ieeexplore.ieee.org/abstract/document/8709925
+
+Utkarsh, Sujit, Azeez S.N., Darshan B.C., Chaya Kumari H.A. (2021) A Study on Discernment of Fake News Using Machine Learning Algorithms. In: Suma V., Bouhmala N., Wang H. (eds) Evolutionary Computing and Mobile Sustainable Networks. Lecture Notes on Data Engineering and Communications Technologies, vol 53. Springer, Singapore. https://doi.org/10.1007/978-981-15-5258-8_60
+
+M. Granik and V. Mesyura, "Fake news detection using naive Bayes classifier," 2017 IEEE First Ukraine Conference on Electrical and Computer Engineering (UKRCON), Kiev, 2017, pp. 900-903, doi: 10.1109/UKRCON.2017.8100379.
+https://ieeexplore.ieee.org/abstract/document/8100379
+
+Vero ́nica Pe ́rez-Rosas1, Bennett Kleinberg2, Alexandra Lefevre1
+Rada Mihalcea1
+1Computer Science and Engineering, University of Michigan
+2Department of Psychology, University of Amsterdam vrncapr@umich.edu,b.a.r.kleinberg@uva.nl,mihalcea@umich.edu
+https://arxiv.org/pdf/1708.07104.pdf
+
+
