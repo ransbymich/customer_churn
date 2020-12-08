@@ -1,0 +1,41 @@
+﻿Customer Churn analysis model for Software-as-a-Service business models
+
+
+Michael Ransby, Brandon Beck
+
+
+
+
+
+
+
+
+Problem Definition
+Business analysts often find themselves trying to optimise for the customer experience, with a "red flag" being the churn rate of customers - they've been sucked in but aren't convinced the value provided exceeds the value attained through continued payments for a given service. 
+
+
+This project aims to serve as a proof of concept for a given business to analyse various customer metrics - and ensure they are informed by those that correlate with the real world. 
+Data Collection
+Looking through the various datasets available, we found a dataset on Kaggle, with a (relatively) high number of observations, and features - allowing for demonstration of an explained variance process. The high number of features will allow us to determine which attributes of customers have influence/indication about their likelihood to churn. Kaggle had the entire dataset available for download as a csv, which is a straightforward filetype to handle.
+Data Preprocessing
+The dataset can be handled easily using pandas. The dataset contains a few datatypes so something like numpy cannot be used. Pandas is easily able to clean the data of points that contain empty or invalid cells. When something empty or invalid is found that entire datapoint is removed as opposed to interpolating the data by for example taking the mean of that feature (for numerical features). Something like taking the mean would only serve to bias the incomplete user data towards the others, so we avoid this.
+
+
+Methods
+Encoding
+Using the pandas library, we are simply able to assign a datatype (category, float, etc) to import our data from the csv format given. We now have a data frame, which is easily usable for our purposes.
+Preliminary Data Check[a]
+The main check here is to ensure our data set is balanced, which as we have an imbalance of less than half a percent ($50.4\%-49.6\%$), we have satisfied.
+Feature Importance
+We used an implementation of random forest from the homeworks to find the importance of each feature in the dataset. By fitting the data we can make a plot of the feature importance attribute to identify the relevant features in the dataset. This plot showed that a customer’s loyalty to the provider is the highest correlating feature in the set. After loyalty, the existence of a month-to-month contract weighs heavily in a customer’s likelihood to churn. This is followed closely by both numerical values surrounding the cost, with total cost weighing a lot more. After these the top features generally surround the quality of the product and ease of service provided from the company. Features such as gender, age, marriage status, and having dependents weighed very low in the indication of churn.
+Results
+asdf
+Discussion
+Stuff
+
+
+Conclusion
+asdf
+
+
+[a]what is this?
