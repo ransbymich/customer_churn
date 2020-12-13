@@ -1,6 +1,7 @@
 # Customer Churn analysis for service-based business models
 
 ### Michael Ransby, Brandon Beck
+### [See the Jupyter Notebook](churn-notebook.html)
 
 ## Problem Definition
 Business analysts often find themselves trying to optimize for the customer experience, with a "red flag" being the churn rate of customers - they've been sucked in but aren't convinced the value provided exceeds the value attained through continued payments for a given service. 
