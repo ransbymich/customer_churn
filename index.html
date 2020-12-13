@@ -53,20 +53,20 @@ This project aims to serve as a proof of concept for a given business to analyze
 <a id="feature-importance" class="anchor" href="#feature-importance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feature Importance</h3>
 <p>We used an implementation of random forest from the homeworks to find the importance of each feature in the dataset. By fitting the data we can make a plot of the feature importance attribute to identify the relevant features in the dataset.</p>
 <p>Interestingly, the feature making a customer least likely to churn is their tenure (the number of months they have been retained as a customer). This is consistent with a customer being on a "month to month" contract, which most positively indicates the churn of a given customer.</p>
-<p><img src="https://github.gatech.edu/mransby3/machine-learning-project/blob/master/images/feature_importance.png" alt="Feature_Importances"></p>
+<p><img src="images/feature_importance.png" alt="Feature_Importances"></p>
 <h3>
 <a id="svd-2d" class="anchor" href="#svd-2d" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SVD 2D</h3>
-<p><img src="https://github.gatech.edu/mransby3/machine-learning-project/blob/master/images/SVD_2D.png" alt="SVD_2D"></p>
+<p><img src="images/SVD_2D.png" alt="SVD_2D"></p>
 <h3>
 <a id="svd-3d" class="anchor" href="#svd-3d" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SVD 3D</h3>
-<p><img src="https://github.gatech.edu/mransby3/machine-learning-project/blob/master/images/SVD_3D.png" alt="UPDATE THIS"></p>
+<p><img src="images/SVD_3D.png" alt="UPDATE THIS"></p>
 <h3>
 <a id="model-selection" class="anchor" href="#model-selection" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Model Selection</h3>
 <p>In the Jupyter notebook LINK, we perform a search across many parameters across DecisionTree, AdaBoost, RandomForest, Logistic Regression, and a Tensorflow Sequential Neural Network through the use of the GridSearchCV tool built into scikit-learn. See the notebook for accuracy per model and their corresponding confusion matrices</p>
 <h2>
 <a id="results" class="anchor" href="#results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Results</h2>
 <p>The Random Forest Classifier was shown to have the highest accuracy (83%) across our testing, with the following confusion matrix.</p>
-<p><img src="https://github.gatech.edu/mransby3/machine-learning-project/blob/master/images/Random_Forest_CM.png" alt="Random-Forest-Confusion-Matrix"></p>
+<p><img src="images/Random_Forest_CM.png" alt="Random-Forest-Confusion-Matrix"></p>
 <p>The feature importance plot outlined in our methods showed that a customer’s loyalty to the provider is the highest correlating feature in the set. After loyalty, the existence of a month-to-month contract weighs heavily in a customer’s likelihood to churn. This is followed closely by both numerical values surrounding the cost, with total cost weighing a lot more. After these, the top features generally surround the quality of the product and ease of service provided by the company. Features such as gender, age, marriage status, and having dependents weighed very low in the indication of churn.</p>
 <h2>
 <a id="discussion" class="anchor" href="#discussion" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Discussion</h2>
