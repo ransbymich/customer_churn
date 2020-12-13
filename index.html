@@ -49,6 +49,7 @@ This project aims to serve as a proof of concept for a given business to analyze
 <h3>
 <a id="preliminary-data-check" class="anchor" href="#preliminary-data-check" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Preliminary Data Check</h3>
 <p>Checking the balance of the classes (Churned/Not Churned), we see a distribution of 26.5% Not and 73.5% churned. To overcome this we used the SMOTE method from the library <code>imblearn</code> to balance the classes for training and testing. It is not mentioned in the notebook, however, this boosted accuracy across all models tested by roughly 5%.</p>
+<p><img src="images/numeric_correlation.png" alt="numeric_correlation"></p>
 <h3>
 <a id="feature-importance" class="anchor" href="#feature-importance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feature Importance</h3>
 <p>We used an implementation of the random forest classifier from the previous homework to find the importance of each feature in the dataset. By fitting the data we can make a plot of the feature importance attribute to identify the relevant features in the dataset.</p>
@@ -70,11 +71,24 @@ This project aims to serve as a proof of concept for a given business to analyze
 <p>The feature importance plot outlined in our methods showed that a customer’s loyalty to the provider is the highest correlating feature in the set. After loyalty, the existence of a month-to-month contract weighs heavily in a customer’s likelihood to churn. This is followed closely by both numerical values surrounding the cost, with total cost weighing a lot more. After these, the top features generally surround the quality of the product and ease of service provided by the company. Features such as gender, age, marriage status, and having dependents weighed very low in the indication of churn.</p>
 <h2>
 <a id="discussion" class="anchor" href="#discussion" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Discussion</h2>
-<p><strong>Put graphs in here and have a little one liner about each of them. Talk about what we did to the data and what the results are telling us</strong></p>
+<p>A few interesting points came up through data exploration</p>
+<h3>
+<a id="number-of-customers-by-contract-type" class="anchor" href="#number-of-customers-by-contract-type" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Number of customers by Contract type</h3>
+<p>Although "month-to-month" was identified as having a positive correlation with churn, this group makes up the largest proportion of overall customers. More exploration is required to ascertain the reason for this, be it economic or business model related.</p>
+<p><img src="images/count_by_contract_type.png" alt="count_by_contract_type"></p>
+<h3>
+<a id="distribution-of-customers-by-tenure" class="anchor" href="#distribution-of-customers-by-tenure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Distribution of customers by tenure</h3>
+<p>This chart displays a textbook example of a "bathtub" curve. Customers at 70 months are explained by the inception of our services. Of concern is the distribution of customers below 10 months. The onboarding process must be analyzed for abrasion to the customer.</p>
+<p><img src="images/count_by_tenure.png" alt="count_by_tenure"></p>
+<h3>
+<a id="churn-by-monthly-charge" class="anchor" href="#churn-by-monthly-charge" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Churn by Monthly Charge</h3>
+<p>Unsurprisingly, it appears customers with a lower monthly charge are less likely to churn</p>
+<p><img src="images/churn_by_monthly_charge.png" alt="churn_by_monthly_charge"></p>
 <h2>
 <a id="conclusion" class="anchor" href="#conclusion" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Conclusion</h2>
-<p>As a result of this study, we can affirm that certain attributes like <strong>INSERT BEST FEATURES HERE</strong> can be used with high accuracy to determine which customers are likely to discontinue your service or switch to another provider. <strong>ANYTHING ELSE FROM RESULTS THAT COULD BE CONSIDERED A RECOMMENDATION WE MAKE FROM THIS STUDY</strong>
-This information is critical for companies that struggle with retention or want to target certain groups to gain traction with their demographic. Using targeted deals and pricing, this model can show a company that users need a nudge to remain loyal to their brand. In this instance, phone companies can analyze the prices to set and deals to offer when comparing to their rival providers.</p>
+<p>As a result of this study, we can affirm that certain attributes such as the use of a one or two-year contract, along with reducing the number of superfluous features (StreamingTV/Movies, Tech support, and device protection) can be used with high accuracy to determine which customers are likely to discontinue your service or switch to another provider.</p>
+<p>Moving forward, this model could be expanded as a recommender of features/offers to customers to reduce overall churn.</p>
+<p>This information is critical for companies that struggle with retention or want to target certain groups to gain traction with their demographic. Using targeted deals and pricing, this model can show a company that users need a nudge to remain loyal to their brand. In this instance, phone companies can analyze the prices to set and deals to offer when comparing to their rival providers.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.gatech.edu/mransby3/machine-learning-project">Customer Churn ML</a> is maintained by <a href="https://github.gatech.edu/mransby3">mransby3</a>.</span>
