@@ -28,7 +28,7 @@ This project aims to serve as a proof of concept for a given business to analyze
 <h3>
 <a id="citations" class="anchor" href="#citations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Citations</h3>
 <p>The first citation would be a conversation between Michael and a colleague/mentor.</p>
-<p>The conversation piqued an interest in machine learning and data analysis for business analytic pipelines. This project serves as a proof of concept to build a pipeline around, such that Michael is able to continue to provide data-driven business analytics.</p>
+<p>The conversation piqued an interest in machine learning and data analysis for business analytic pipelines. This project serves as a proof of concept to build a pipeline around, such that Michael can continue to provide data-driven business analytics.</p>
 <p><a href="https://medium.com/@paldesk/what-is-customer-churn-how-to-reduce-it-402460e5b569">https://medium.com/@paldesk/what-is-customer-churn-how-to-reduce-it-402460e5b569</a></p>
 <p><a href="https://www.profitwell.com/recur/all/involuntary-delinquent-churn-failed-payments-recovery">https://www.profitwell.com/recur/all/involuntary-delinquent-churn-failed-payments-recovery</a></p>
 <h2>
@@ -51,7 +51,7 @@ This project aims to serve as a proof of concept for a given business to analyze
 <p>Checking the balance of the classes (Churned/Not Churned), we see a distribution of 26.5% Not and 73.5% churned. To overcome this we used the SMOTE method from the library <code>imblearn</code> to balance the classes for training and testing. It is not mentioned in the notebook, however, this boosted accuracy across all models tested by roughly 5%.</p>
 <h3>
 <a id="feature-importance" class="anchor" href="#feature-importance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feature Importance</h3>
-<p>We used an implementation of random forest from the homeworks to find the importance of each feature in the dataset. By fitting the data we can make a plot of the feature importance attribute to identify the relevant features in the dataset.</p>
+<p>We used an implementation of the random forest classifier from the previous homework to find the importance of each feature in the dataset. By fitting the data we can make a plot of the feature importance attribute to identify the relevant features in the dataset.</p>
 <p>Interestingly, the feature making a customer least likely to churn is their tenure (the number of months they have been retained as a customer). This is consistent with a customer being on a "month to month" contract, which most positively indicates the churn of a given customer.</p>
 <p><img src="images/feature_importance.png" alt="Feature_Importances"></p>
 <h3>
@@ -62,7 +62,7 @@ This project aims to serve as a proof of concept for a given business to analyze
 <p><img src="images/SVD_3D.png" alt="UPDATE THIS"></p>
 <h3>
 <a id="model-selection" class="anchor" href="#model-selection" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Model Selection</h3>
-<p>In the Jupyter notebook LINK, we perform a search across many parameters across DecisionTree, AdaBoost, RandomForest, Logistic Regression, and a Tensorflow Sequential Neural Network through the use of the GridSearchCV tool built into scikit-learn. See the notebook for accuracy per model and their corresponding confusion matrices</p>
+<p>In the <a href="https://github.gatech.edu/mransby3/machine-learning-project/blob/master/churn-notebook.ipynb">Jupyter Notebook</a>, we perform a search across many parameters across DecisionTree, AdaBoost, RandomForest, Logistic Regression, and a Tensorflow Sequential Neural Network through the use of the GridSearchCV tool built into scikit-learn. See the notebook for accuracy per model and their corresponding confusion matrices</p>
 <h2>
 <a id="results" class="anchor" href="#results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Results</h2>
 <p>The Random Forest Classifier was shown to have the highest accuracy (83%) across our testing, with the following confusion matrix.</p>
